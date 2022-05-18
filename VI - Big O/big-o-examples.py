@@ -1,4 +1,10 @@
-from rot13 import rot13
+import sys
+import os
+
+enc_dec_path = os.path.join(os.path.dirname(os.getcwd()), "encoder_decoder")
+sys.path.insert(1, enc_dec_path)
+
+from enc_dec import encode, decode
 
 
 def cVI_ex1_pg40():
@@ -124,8 +130,10 @@ def cVI_example1_pg46():
         print(f"Example 1: {sum = } {product = }")
 
     spam(list_a)
-    answer = rot13("")
-    print(answer)
+    ex1_answer = decode(
+        "Guvf jvyy gnxr B bs A gvzr. Gur snpg gung jr vgrengr guebhtu gur neenl gjvpr qbrfa'g znggre."
+    )
+    print(f"{ex1_answer = }")
 
 
 def main():
@@ -137,7 +145,8 @@ def main():
     # cVI_addtheruntimes_pg43()
     # print("cVI_mutiplytheruntime_pg43() = ")
     # cVI_multiplyruntimes_pg43()
-    print(f"{cVI_recursiveruntimes_pg44() = }")
+    # print(f"{cVI_recursiveruntimes_pg44() = }")
+    cVI_example1_pg46()
 
 
 if __name__ == "__main__":
