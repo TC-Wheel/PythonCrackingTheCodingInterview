@@ -131,9 +131,24 @@ def cVI_example1_pg46():
 
     spam(list_a)
     ex1_answer = decode(
-        "Guvf jvyy gnxr B bs A gvzr. Gur snpg gung jr vgrengr guebhtu gur neenl gjvpr qbrfa'g znggre."
+        """Guvf jvyy gnxr B bs A gvzr. Gur snpg gung jr vgrengr guebhtu gur neenl gjvpr qbrfa'g znggre."""
     )
     print(f"{ex1_answer = }")
+
+
+def cVI_example2_pg46():
+    """What is the runtime of the following code?"""
+    list_a = [n for n in range(10)]
+
+    def print_pairs(list_a):
+        for num1 in list_a:
+            for num2 in list_a:
+                print(num1 + "," + num2)
+
+    ex2_answer = decode(
+        """Gur vaare sbe ybbc unf B bs A vgrengvbaf naq vg vf pnyyrq A gvzrf. Gurersber, gur ehagvzr vf B bs A fdhnerq."""
+    )
+    print(f"{ex2_answer = }")
 
 
 def main():
@@ -146,7 +161,8 @@ def main():
     # print("cVI_mutiplytheruntime_pg43() = ")
     # cVI_multiplyruntimes_pg43()
     # print(f"{cVI_recursiveruntimes_pg44() = }")
-    cVI_example1_pg46()
+    # cVI_example1_pg46()
+    cVI_example2_pg46()
 
 
 if __name__ == "__main__":
